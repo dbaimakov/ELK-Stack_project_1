@@ -101,12 +101,5 @@ SSH into the control node and follow the steps below:
 - _Which URL do you navigate to in order to check that the ELK server is running? http://23.102.97.57:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
-ssh sysadmin@23.102.97.57
-sudo su
-docker container list -a
-docker start charming_panini
-docker attach charming_panini
-ansible all -m ping
-touch /etc/ansible/install-elk.yml
-nano /etc/ansible/install-elk.yml
+ssh sysadmin@13.68.142.130 | sudo su | docker container list -a | docker start charming_panini | docker attach charming_panini | ansible all -m ping | touch /etc/ansible/install-elk2.yml | nano /etc/ansible/install-elk2.yml
 
