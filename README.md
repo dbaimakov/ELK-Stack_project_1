@@ -100,7 +100,8 @@ SSH into the control node and follow the steps below:
 - `sudo docker cp install-elk.yml charming_panini:/etc/ansible/roles/install-elk.yml`
 - Update the ansible host file to include private IP's of Web1,2,3
 - `nano /etc/ansible/hosts`
-- Run the playbook, and navigate to Jumpbox to check that installation worked as expected.
+- https://github.com/dbaimakov/ELK-Stack_project_1/blob/6638154212c51e59dd6dfd636022c8f66cac28a0/ansible.hosts.yml
+- - Run the playbook, and navigate to Jumpbox to check that installation worked as expected.
 - `ansible-playbook /etc/ansible/elk-stack-playbook.yml`
 - `http://23.102.97.57:5601/app/kibana#/home`
 
@@ -108,8 +109,10 @@ SSH into the control node and follow the steps below:
 - _Which file is the playbook? Where do you copy it? 
 - $ `install-elk.yml` in to the `/etc/ansible` directory
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
-- $ `install-elk.yml`file. By editing the hosts file under Ansible hosts you can specify which group you need `webservers` or `elk`  
-- _Which URL do you navigate to in order to check that the ELK server is running? 
+- $ `nano /etc/ansible/hostsfile. By editing the hosts file under Ansible hosts you can specify which group you need `webservers` or `elk` 
+-  https://github.com/dbaimakov/ELK-Stack_project_1/blob/6638154212c51e59dd6dfd636022c8f66cac28a0/ansible.hosts.yml
+-- https://github.com/dbaimakov/ELK-Stack_project_1/blob/6638154212c51e59dd6dfd636022c8f66cac28a0/Filebeat.config.yml
+- - - _Which URL do you navigate to in order to check that the ELK server is running? 
 - `http://23.102.97.57:5601/app/kibana`
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
