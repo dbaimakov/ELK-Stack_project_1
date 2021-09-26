@@ -216,8 +216,7 @@ FILEBEAT PLAYBOOK
        enabled: yes
 
 In the filebeat-config file  I had to make changes in Elasticsearch Output to specify the http port 9200 for the log creation and port 5601 to be used with kibana
- http://localhost:9200/path
-  # IPv6 addresses should always be defined as: https://[2001:db8::1]:9200
+ 
   hosts: ["10.1.0.4:9200"]
   username: "elastic"
   password: "changeme"
@@ -275,7 +274,6 @@ output.elasticsearch:
   # The Logstash hosts
  hosts: ["10.1.0.4:5044"]
  
-  # IPv6 addresses should always be defined as: https://[2001:db8::1]:9200
   hosts: ["10.1.0.4:9200"]
   username: "elastic"
   password: "changeme"
