@@ -59,7 +59,7 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: 
 
-`174.95.182.223` (My iMac's IP address)
+`My home public IP` (My iMac's IP address)
 Machines within the network can only be accessed by Jumpbox.
 
 Which machine is allowed to access your ELK VM? What is its IP address?
@@ -69,11 +69,11 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|--------|----------------------|
-| Jump Box | Yes    | 174.95.182.223 |
+| Jump Box | Yes    | My home IP |
 | Web-1   | No.     | 10.0.0.4   |      
 | Web-2   | No      | 10.0.0.4   |     
 | Web-3   | No      | 10.0.0.4   |    
-| ELK-VM  | Yes     | 174.95.182.223 |   
+| ELK-VM  | Yes     | My home IP |   
 
 ### Elk Configuration
 
