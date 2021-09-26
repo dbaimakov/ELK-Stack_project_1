@@ -175,18 +175,6 @@ For the successful installation of this playbook I had to edit the server host c
                       10.0.0.8 ansible_python_interpreter=/usr/bin/python3
 [elk]
                       10.1.0.4 ansible_python_interpreter=/usr/bin/python3
-# If you have multiple hosts following a pattern you can specify
-# them like this:
-
-
-#-------------------------- Elasticsearch output -------------------------------
-output.elasticsearch:
-  # Boolean flag to enable or disable the output module.
-  #enabled: true
-
-  # Array of hosts to connect to.
-  # Scheme and port can be left out and will be set to the default (http and 9200)
-  # In case you specify and additional path, the scheme is required: http://localhost:9200/path
   # IPv6 addresses should always be defined as: https://[2001:db8::1]:9200
   hosts: ["10.1.0.4:9200"]
   username: "elastic"
@@ -228,27 +216,15 @@ FILEBEAT PLAYBOOK
        enabled: yes
 
 In the filebeat-config file  I had to make changes in Elasticsearch Output to specify the http port 9200 for the log creation and port 5601 to be used with kibana
-#-------------------------- Elasticsearch output -------------------------------
-output.elasticsearch:
-  # Boolean flag to enable or disable the output module.
-  #enabled: true
-
-  # Array of hosts to connect to.
-  # Scheme and port can be left out and will be set to the default (http and 9200)
-  # In case you specify and additional path, the scheme is required: http://localhost:9200/path
+ http://localhost:9200/path
   # IPv6 addresses should always be defined as: https://[2001:db8::1]:9200
   hosts: ["10.1.0.4:9200"]
   username: "elastic"
   password: "changeme"
 And In the KIBANA Section
-#============================== Kibana =====================================
-
-# Starting with Beats version 6.0.0, the dashboards are loaded via the Kibana API.
-# This requires a Kibana endpoint configuration.
+#
 setup.kibana:
   host: "10.1.0.4:5601"
- 
- 
  
 The following is the metricbeat playbook, similar to the filebeat. I have used a mac command here simply to showcase that various systems that require various commands for downloading and installing programs. For example in linux: dpkg -i; to unzip and install a mac file command is: tar -xvf 
 
@@ -284,32 +260,21 @@ The METRICBEAT PLAYBOOK
      masked: no
 
 I have made the following changes to the metricbeat-config.yml file very similar to the filebeat configuration files, however in the metricbeat I had to edit both the metricbeat.yml and metricbeat.referene.yml files 
-# =================================== Kibana ===================================
 
-# Starting with Beats version 6.0.0, the dashboards are loaded via the Kibana API.
-# This requires a Kibana endpoint configuration.
 setup.kibana:
 host: "10.1.0.4:5601"
   # Kibana Host
-Elasticsearch Output ----------------------------
+  
 output.elasticsearch:
   # Array of hosts to connect to.
   hosts: ["10.1.0.4:9200"]
   username: "elastic"
   password: "changeme"
-# ------------------------------ Logstash Output -------------------------------
+  
 #output.logstash:
   # The Logstash hosts
  hosts: ["10.1.0.4:5044"]
-
-#-------------------------- Elasticsearch output -------------------------------
-output.elasticsearch:
-  # Boolean flag to enable or disable the output module.
-  #enabled: true
-
-  # Array of hosts to connect to.
-  # Scheme and port can be left out and will be set to the default (http and 9200)
-  # In case you specify and additional path, the scheme is required: http://localhost:9200/path
+ 
   # IPv6 addresses should always be defined as: https://[2001:db8::1]:9200
   hosts: ["10.1.0.4:9200"]
   username: "elastic"
