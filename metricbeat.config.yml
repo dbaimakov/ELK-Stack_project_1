@@ -1,4 +1,5 @@
-I have made the following changes to the metricbeat-config.yml file very similar to the filebeat configuration files, however in the metricbeat I had to edit both the metricbeat.yml and metricbeat.referene.yml files 
+I have made the following changes to the metricbeat-config.yml file very similar to the filebeat configuration files, however in the metricbeat 
+I had to edit both the metricbeat.yml and metricbeat.referene.yml files 
 # =================================== Kibana ===================================
 
 # Starting with Beats version 6.0.0, the dashboards are loaded via the Kibana API.
