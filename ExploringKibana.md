@@ -24,44 +24,31 @@ Activity File: Exploring Kibana
      - Unique visitors: 1
      https://github.com/dbaimakov/ELK-Stack_project_1/blob/dace3fc34708f853fdf42368faf5e3feb515affe/Images/Kibana7.png     
      - In your own words, is there anything that seems potentially strange about this activity?
-     - The number of unique visitors is very low in comparison to other times. During other times, such low number of unique visitors corresponds with lower number of 
-bytes. Could be a sign of a user extracting data, but further research is needed.
+     - The number of unique visitors is very low in comparison to other times. During other times, such low number of unique visitors corresponds with lower number of bytes. Could be a sign of a user extracting data, but further research is needed.
 
 4. Filter the data by this event.
-     - What is the timestamp for this event?
-      - 2021-09-19 22:57:28.552
-     - What kind of file was downloaded?
-      - rpm
-     - From what country did this activity originate?
-     - India
-     - What HTTP response codes were encountered by this visitor?
-     - 200
+     - What is the timestamp for this event? | 2021-09-19 22:57:28.552
+     - What kind of file was downloaded? | rpm
+     - From what country did this activity originate? | India
+     - What HTTP response codes were encountered by this visitor? | 200
      https://github.com/dbaimakov/ELK-Stack_project_1/blob/dace3fc34708f853fdf42368faf5e3feb515affe/Images/kibana9.png
      
 5. Switch to the Kibana Discover page to see more details about this activity.
-     - What is the source IP address of this activity?
-     - 35.143.166.159
-     - What are the geo coordinates of this activity?
-    -  "lat": 43.34121,
-    -  "lon": -73.6103075
-  - What OS was the source machine running?
- -  Win 8
+     - What is the source IP address of this activity? | 35.143.166.159
+     - What are the geo coordinates of this activity? |"lat": 43.34121 | "lon": -73.6103075
+  - What OS was the source machine running? | Win 8
      - What is the full URL that was accessed?
  https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-6.3.2-i686.rpm     
  - From what website did the visitor's traffic originate?
  http://facebook.com/success/jay-c-buckey
  
- https://github.com/dbaimakov/ELK-Stack_project_1/blob/dace3fc34708f853fdf42368faf5e3feb515affe/Images/Kibana10.png6. 
+ https://github.com/dbaimakov/ELK-Stack_project_1/blob/dace3fc34708f853fdf42368faf5e3feb515affe/Images/Kibana10.png
  
  Finish your investigation with a short overview of your insights. 
-     - What do you think the user was doing?
-     - Trying to download some free software
-     - Was the file they downloaded malicious? If not, what is the file used for?
-     - They download the metricbeats file, which is used to show processing data
-     - Is there anything that seems suspicious about this activity?
-     - Not really since it is normal to download files of the website
-     - Is any of the traffic you inspected potentially outside of compliance guidlines?
-     - Not really, unless there was a big data download that would cap bandwidth; I would say this falls within normal behavior.
+     - What do you think the user was doing? | Trying to download some free software
+     - Was the file they downloaded malicious? If not, what is the file used for? | They download the metricbeats file, which is used to show processing data
+     - Is there anything that seems suspicious about this activity? | Not really since it is normal to download files of the website
+     - Is any of the traffic you inspected potentially outside of compliance guidlines?| Not really, unless there was a big data download that would cap bandwidth; I would say this falls within normal behavior.
 
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
