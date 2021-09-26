@@ -1,0 +1,31 @@
+I have made the following changes to the metricbeat-config.yml file very similar to the filebeat configuration files, however in the metricbeat I had to edit both the metricbeat.yml and metricbeat.referene.yml files 
+# =================================== Kibana ===================================
+
+# Starting with Beats version 6.0.0, the dashboards are loaded via the Kibana API.
+# This requires a Kibana endpoint configuration.
+setup.kibana:
+host: "10.1.0.4:5601"
+  # Kibana Host
+Elasticsearch Output ----------------------------
+output.elasticsearch:
+  # Array of hosts to connect to.
+  hosts: ["10.1.0.4:9200"]
+  username: "elastic"
+  password: "changeme"
+# ------------------------------ Logstash Output -------------------------------
+#output.logstash:
+  # The Logstash hosts
+ hosts: ["10.1.0.4:5044"]
+
+#-------------------------- Elasticsearch output -------------------------------
+output.elasticsearch:
+  # Boolean flag to enable or disable the output module.
+  #enabled: true
+
+  # Array of hosts to connect to.
+  # Scheme and port can be left out and will be set to the default (http and 9200)
+  # In case you specify and additional path, the scheme is required: http://localhost:9200/path
+  # IPv6 addresses should always be defined as: https://[2001:db8::1]:9200
+  hosts: ["10.1.0.4:9200"]
+  username: "elastic"
+  password: "changeme"
