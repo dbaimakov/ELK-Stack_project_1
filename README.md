@@ -3,7 +3,8 @@
 
 The files in this repository were used to configure below network topology.
 
-- #### https://github.com/dbaimakov/ELK-Stack_project_1/blob/78e22782a57aa4ffe4dfc79c376061715484ccf7/diagrams/AzureCloudSetup.drawio.png
+- #### https://github.com/dbaimakov/ELK-Stack_project_1/blob/main/diagrams/AzureCloudSetup.drawio.png
+
 
 #### These files have been properly tested to create a live ELK deployment (ElasticSearch, Logstash and Kibana) on Azure. Files in this project can be used to recreate an entire deployment from the diagram above. Alternatively, specific parts of the YAML playbook file could be utilized to install only certain parts of it, such as Filebeat or Metricbeat.
 
